@@ -14,40 +14,40 @@ app.get('/oi', function (req, res) {
 })
 
 //Lista de Personagens
-const lista = ['Rick Sanchez', 'Morty Smith', 'Summer Smith']
+//const lista = ['Rick Sanchez', 'Morty Smith', 'Summer Smith']
 
 // Read All -> [GET] /item
-app.get('/item', function (req, res) {
-  res.send(lista)
-})
+//app.get('/item', function (req, res) {
+  //res.send(lista)
+//})
 
 // Read By ID -> [GET] /item/:id
-app.get('/item/:id', function (req, res) {
-  const id = req.params.id
+//app.get('/item/:id', function (req, res) {
+  //const id = req.params.id
 
 //Acesso item na lista baseado no ID recebido
-const item = lista [id]
+//const item = lista [id]
 
 //Envio do item obtido como resposta HTTP
-  res.send(item)
-})
+  //res.send(item)
+//})
 
 //Sinalizamos que o corpo da requisição está em Json
-app.use(express.json())
+//app.use(express.json())
 
 //Create -> [POST] /item
-app.post('/item', function (req, res) {
+//app.post('/item', function (req, res) {
   //Extraímos o corpo da requisição
-  const body = req.body
+  //const body = req.body
   //Pegamos o nome (string) que foi enviado dentro do corpo
-  const item = body.nome
+  //const item = body.nome
   
     //Colocamos o nome dentro da lista de itens
-    lista.push(item)
+    //lista.push(item)
 
     //Enviamos uma resposta de sucesso
-    res.send('Item adicionado com sucesso!')
-  })
+    //res.send('Item adicionado com sucesso!')
+  //})
   
 app.listen(3000)
 
